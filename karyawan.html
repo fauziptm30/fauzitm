@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+      .sidebar {
+        height: 100vh;
+        background-color: #ffffff;
+        border-right: 1px solid #dee2e6;
+      }
+      .sidebar .nav-link {
+        color: #333;
+      }
+      .sidebar .nav-link.active {
+        background-color: #007bff;
+        color: #fff;
+      }
+      .header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px 20px;
+      }
+      .header .navbar-brand {
+        color: #fff;
+        font-size: 1.5rem;
+      }
+      .header .navbar-brand:hover {
+        color: #fff;
+      }
+      .content {
+        padding: 20px;
+      }
+      .table th,
+      .table td {
+        vertical-align: middle;
+        text-align: center;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      .form-select,
+      .form-control {
+        width: auto;
+        display: inline-block;
+      }
+      .card {
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .table-responsive {
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex">
+      <div class="sidebar p-3">
+        <div class="text-center mb-4">
+          <img
+            src="./assets/fauzigtg.jpg"
+            alt="Profile Picture"
+            class="rounded-circle"
+            height="100"
+            width="100"
+          />
+          <p class="mt-2 mb-0">Muhammad Nur Fauzi P</p>
+          <small class="text-muted">Administrator</small>
+        </div>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-home"> </i>
+            Dashboard
+          </a>
+          <p class="text-muted mt-3">MENU KARYAWAN</p>
+          <a class="nav-link active" href="karyawan.html">
+            <i class="fas fa-users"> </i>
+            Karyawan
+          </a>
+          <a class="nav-link" href="jabatan.html"
+            ><i class="fas fa-user-tie"></i> Jabatan</a
+          >
+          <a class="nav-link" href="divisi.html"
+            ><i class="fas fa-building"></i> Divisi</a
+          >
+          <p class="text-muted mt-3">MENU ABSENSI</p>
+          <a class="nav-link" href="absensi.html"
+            ><i class="fas fa-calendar-check"></i> Absensi</a
+          >
+          <a class="nav-link" href="izin.html"
+            ><i class="fas fa-calendar-times"></i> Izin</a
+          >
+          <a class="nav-link" href="lembur.html"
+            ><i class="fas fa-clock"></i> Lembur</a
+          >
+        </nav>
+      </div>
+      <div class="flex-grow-1">
+        <div class="header d-flex justify-content-between align-items-center">
+          <h1 class="navbar-brand mb-0">Daftar Karyawan</h1>
+        </div>
+        <div class="content">
+          <h2>Dashboard</h2>
+          <div class="card mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Data Karyawan</h5>
+              <div class="d-flex justify-content-between mb-3">
+                <div>
+                  <label>
+                    Show
+                    <select class="form-select form-select-sm">
+                      <option>10</option>
+                      <option>25</option>
+                      <option>50</option>
+                      <option>100</option>
+                    </select>
+                    entries
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="Search"
+                  />
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Kode</th>
+                      <th>Nama</th>
+                      <th>Email</th>
+                      <th>Alamat</th>
+                      <th>Jabatan</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>K001</td>
+                      <td>Yovan Fiqri</td>
+                      <td>yf@gmail.com</td>
+                      <td>
+                        Jl. Percetakan Negara No. 45, Gang J, Rt 001/Rw 09
+                        Cempaka Putih
+                      </td>
+                      <td>Staff</td>
+                      <td>
+                        <button class="btn btn-sm btn-primary">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-warning">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <button class="btn btn-primary mt-3">
+                <i class="fas fa-plus"></i> Tambah Karyawan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
